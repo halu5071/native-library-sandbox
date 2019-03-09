@@ -19,3 +19,14 @@ gcc -o main2 executable2.c -lsample_2 -I./ -L./
 echo execute 2
 echo result of show_decorated_one function =======
 ./main2
+
+echo moving so file and executable source to another dir
+mkdir sandbox
+cp executable2.c sandbox/
+cp libsample_1.so sandbox/
+cp libsample_2.so sandbox/
+cd sandbox
+gcc -o main2 executable2.c -lsample_2 -I./ -L./
+
+echo result of executable
+./main2

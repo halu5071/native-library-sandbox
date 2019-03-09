@@ -1,4 +1,5 @@
 #include "lib.h"
+#include "lib2.h"
 #include <stdio.h>
 
 void show_decorated_one() {
